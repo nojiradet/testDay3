@@ -38,6 +38,9 @@ AppAsset::register($this);
                     'class' => 'navbar-default',  //navbar-fixed-top
                 ],
             ]);
+            $seting_menu=[['label' => 'ประเภทสถานะคอมฯ', 'url' => ['/comstatus']],
+             ['label' => 'ยังไม่มี', 'url' => ['/']]
+            ];
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'encodeLabels' => false,
@@ -45,6 +48,7 @@ AppAsset::register($this);
                     ['label' => '<span class="glyphicon glyphicon-home"></span> หน้าแรก', 'url' => ['/site/index']],
                     ['label' => '<span class="glyphicon glyphicon-headphones"></span> เกี่ยวกับ', 'url' => ['/site/about']],
                     ['label' => '<span class="glyphicon glyphicon-stats"></span> รายงาน', 'url' => ['/first1/index']],
+                    ['label' => 'ตั้งค่าระบบ', 'items' => $seting_menu],
                     ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
                     Yii::$app->user->isGuest ? (
                             ['label' => 'Login', 'url' => ['/site/login']]
