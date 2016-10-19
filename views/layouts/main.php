@@ -44,6 +44,7 @@ AppAsset::register($this);
                 'items' => [
                     ['label' => '<span class="glyphicon glyphicon-home"></span> หน้าแรก', 'url' => ['/site/index']],
                     ['label' => '<span class="glyphicon glyphicon-headphones"></span> เกี่ยวกับ', 'url' => ['/site/about']],
+                    ['label' => '<span class="glyphicon glyphicon-stats"></span> รายงาน', 'url' => ['/first1/index']],
                     ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
                     Yii::$app->user->isGuest ? (
                             ['label' => 'Login', 'url' => ['/site/login']]
